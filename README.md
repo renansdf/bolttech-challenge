@@ -1,1 +1,0 @@
-# bolttech-challenge
