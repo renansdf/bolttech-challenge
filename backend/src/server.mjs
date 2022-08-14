@@ -1,12 +1,18 @@
 import 'express-async-errors'
 import express from 'express'
 import { isCelebrateError } from 'celebrate'
+import cors from 'cors'
 
 import routes from './routes/index.mjs'
 import AppError from './utils/appError.mjs'
 
 const server = express()
 
+server.use(cors({
+  origin: "*",
+  credentials:true,
+  optionsSuccessStatus: 200
+}));
 server.use(express.json())
 server.use('/api', routes)
 
