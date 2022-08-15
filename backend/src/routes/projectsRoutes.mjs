@@ -28,8 +28,8 @@ projectsRouter.put('/', celebrate({
   }
 }), controller.updateProject)
 
-projectsRouter.delete('/', celebrate({
-  [Segments.BODY]: {
+projectsRouter.delete('/:id', celebrate({
+  [Segments.PARAMS]: {
     id: Joi.number().required(),
   }
 }), controller.delete)

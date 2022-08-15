@@ -53,8 +53,7 @@ class ProjectsController {
   }
 
   delete = async (request, response) => {
-    const {userid} = request.user
-    const {id} = request.body
+    const {id} = request.params
 
     await projectsService.deleteProjectById(id)
 

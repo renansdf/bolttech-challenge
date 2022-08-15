@@ -53,7 +53,7 @@ class TasksController {
   }
 
   delete = async (request, response) => {
-    const {id} = request.body
+    const {id} = request.params
 
     await tasksService.deleteTaskById(id)
 

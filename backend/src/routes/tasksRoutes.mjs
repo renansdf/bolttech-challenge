@@ -33,8 +33,8 @@ tasksRouter.put('/', celebrate({
   }
 }), controller.updateTasks)
 
-tasksRouter.delete('/', celebrate({
-  [Segments.BODY]: {
+tasksRouter.delete('/:id', celebrate({
+  [Segments.PARAMS]: {
     id: Joi.number().required(),
   }
 }), controller.delete)

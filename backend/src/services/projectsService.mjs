@@ -79,7 +79,7 @@ class ProjectsService {
     }
   }
 
-  deleteProjectById = async (id, userid) => {
+  deleteProjectById = async (id) => {
     const projectExists = await this.getProjectById(id)
 
     if(!projectExists){
@@ -87,8 +87,8 @@ class ProjectsService {
     }
 
     const query = {
-      text: 'DELETE FROM projects WHERE id = $1 AND user_id = $2',
-      values: [id, userid],
+      text: 'DELETE FROM projects WHERE id = $1',
+      values: [id],
     }
 
     try{

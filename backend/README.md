@@ -26,3 +26,7 @@ npm run start
 ```
 
 Novamente o terminal deve exibir uma mensagem de funcionamento.
+
+### melhorias
+- ao deletar algum projeto ou tarefa, certificar que o usuário que está solicitando
+a deleção é de fato o dono daquele artefato.
